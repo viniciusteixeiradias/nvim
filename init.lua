@@ -1,0 +1,3 @@
+require("vinicius")
+print("hello")
+
