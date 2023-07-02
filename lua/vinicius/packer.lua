@@ -52,4 +52,10 @@ return require('packer').startup(function(use)
 		  {'rafamadriz/friendly-snippets'},
 	  }
   }
+
+  -- vim-be-good
+  use('ThePrimeagen/vim-be-good')
+
+  -- comments
+  use('numToStr/Comment.nvim')
 end)

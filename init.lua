@@ -1,3 +1,1 @@
 require("vinicius")
-print("hello")
-
