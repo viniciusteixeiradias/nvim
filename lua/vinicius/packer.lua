@@ -9,7 +9,6 @@ return require('packer').startup(function(use)
   -- telescope to search
   use {
 	  'nvim-telescope/telescope.nvim', tag = '0.1.2',
-	  -- or                            , branch = '0.1.x',
 	  requires = { {'nvim-lua/plenary.nvim'} }
   }
 
@@ -58,4 +57,40 @@ return require('packer').startup(function(use)
 
   -- comments
   use('numToStr/Comment.nvim')
+
+  -- coc check syntax
+  use('neoclide/coc.nvim', { branch = 'release' })
+
+  -- airline status bar
+  use('vim-airline/vim-airline')
+  use('vim-airline/vim-airline-themes')
+
+  -- multiple-cursors
+  use('terryma/vim-multiple-cursors')
+
+  -- git-blame
+ use('f-person/git-blame.nvim')
+
+  -- prettier
+  use {
+    'prettier/vim-prettier',
+    run = 'npm install'
+  }
+
+  -- top-bar like vscode
+  use({
+    "utilyre/barbecue.nvim",
+    tag = "*",
+    requires = {
+      "SmiteshP/nvim-navic",
+      "nvim-tree/nvim-web-devicons", -- optional dependency
+    },
+    after = "nvim-web-devicons", -- keep this if you're using NvChad
+    config = function()
+      require("barbecue").setup()
+    end,
+  })
+
+  -- autoclose brackets
+  use ('m4xshen/autoclose.nvim')
 end)

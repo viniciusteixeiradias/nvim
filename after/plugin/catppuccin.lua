@@ -16,7 +16,6 @@ require("catppuccin").setup({
         nvimtree = true,
         telescope = true,
     },
-
     highlight_overrides = {
         mocha = function()
             return {
